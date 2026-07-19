@@ -3,73 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="韭菜喵厂长 — 付费订阅制量化交易研究与每日量化金融数据动态邮件服务。用户主动订阅，随时可退订。">
-<title>韭菜喵厂长 · MiaoAlpha — 量化交易研究订阅</title>
+<meta name="description" content="韭菜喵厂长 MiaoAlpha — 付费订阅制量化市场情绪与数据看板邮件服务。用户主动订阅，按看板推送，随时可退订。A paid, opt-in subscription email service delivering quantitative market-sentiment dashboards.">
+<title>韭菜喵厂长 · MiaoAlpha — 量化数据看板订阅服务</title>
 <style>
   :root {
-    --bg: #fafafa;
-    --card: #ffffff;
-    --text: #1a1a1a;
-    --muted: #666;
-    --accent: #0e7c5a;
-    --accent-soft: #e6f4ef;
-    --border: #e5e5e5;
+    --bg: #fafafa; --card: #ffffff; --text: #1a1a1a; --muted: #666;
+    --accent: #0e7c5a; --accent-soft: #e6f4ef; --border: #e5e5e5;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #111417;
-      --card: #1a1f24;
-      --text: #e8e8e8;
-      --muted: #9aa4ad;
-      --accent: #35c795;
-      --accent-soft: #16302a;
-      --border: #2a3138;
+      --bg: #111417; --card: #1a1f24; --text: #e8e8e8; --muted: #9aa4ad;
+      --accent: #35c795; --accent-soft: #16302a; --border: #2a3138;
     }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111417; --card: #1a1f24; --text: #e8e8e8; --muted: #9aa4ad;
+    --accent: #35c795; --accent-soft: #16302a; --border: #2a3138;
+  }
+  :root[data-theme="light"] {
+    --bg: #fafafa; --card: #ffffff; --text: #1a1a1a; --muted: #666;
+    --accent: #0e7c5a; --accent-soft: #e6f4ef; --border: #e5e5e5;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.75;
+    background: var(--bg); color: var(--text); line-height: 1.75;
   }
-  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
-  header {
-    padding: 72px 0 56px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 68px 0 48px; text-align: center; border-bottom: 1px solid var(--border); }
   .logo { font-size: 56px; line-height: 1; }
   h1 { font-size: 32px; margin: 16px 0 8px; letter-spacing: 1px; }
   .tagline { font-size: 17px; color: var(--muted); }
+  .badges { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
   .badge {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 6px 16px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 999px;
-    font-size: 14px;
+    display: inline-block; padding: 6px 16px; background: var(--accent-soft);
+    color: var(--accent); border-radius: 999px; font-size: 14px;
   }
   section { padding: 44px 0; border-bottom: 1px solid var(--border); }
-  h2 {
-    font-size: 21px;
-    margin-bottom: 16px;
-    color: var(--accent);
-  }
+  h2 { font-size: 21px; margin-bottom: 16px; color: var(--accent); }
+  h3 { font-size: 16px; margin: 20px 0 10px; }
   p, li { font-size: 16px; color: var(--text); }
   ul { padding-left: 22px; margin-top: 8px; }
   li { margin-bottom: 8px; }
   .muted { color: var(--muted); font-size: 14px; }
   .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin-top: 16px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 26px; margin-top: 16px;
   }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 18px; }
+  .tile {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px;
+  }
+  .tile .ic { font-size: 26px; }
+  .tile h4 { font-size: 15.5px; margin: 8px 0 6px; }
+  .tile p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
   .en { font-size: 15px; color: var(--muted); }
   .en h2 { font-size: 18px; }
+  .en li, .en p { font-size: 15px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff !important;
+    text-decoration: none; padding: 11px 24px; border-radius: 9px;
+    font-size: 14.5px; font-weight: bold; margin-top: 8px;
+  }
+  .placeholder {
+    border: 1.5px dashed var(--border); border-radius: 10px; padding: 18px;
+    color: var(--muted); font-size: 14px; text-align: center; margin-top: 12px;
+  }
   footer { padding: 36px 0 56px; text-align: center; }
   footer p { font-size: 14px; color: var(--muted); }
   a { color: var(--accent); text-decoration: none; }
@@ -81,22 +81,55 @@
 <header>
   <div class="wrap">
     <div class="logo">🐱📈</div>
-    <h1>韭菜喵厂长</h1>
+    <h1>韭菜喵厂长 · MiaoAlpha</h1>
     <p class="tagline">带你玩转量化交易 · 关注每日量化金融数据动态</p>
-    <span class="badge">会员订阅制 · 邮件推送服务</span>
+    <div class="badges">
+      <span class="badge">会员订阅制</span>
+      <span class="badge">量化数据看板</span>
+      <span class="badge">主动订阅 · 随时退订</span>
+    </div>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>服务内容</h2>
-    <p>「韭菜喵厂长」是一项<strong>付费会员订阅服务</strong>，面向对量化交易感兴趣的个人投资者与研究者，通过电子邮件推送以下内容：</p>
-    <ul>
-      <li>每日量化金融数据动态与市场观察</li>
-      <li>量化策略研究、回测思路与方法分享</li>
-      <li>按会员订阅偏好定制的个性化研究内容（每位会员每天 1&ndash;3 封）</li>
-    </ul>
-    <p class="muted" style="margin-top:12px">所有内容仅为研究与数据资讯分享，不构成任何投资建议；市场有风险，投资需谨慎。</p>
+    <h2>我们是谁</h2>
+    <p>「韭菜喵厂长」是一位专注量化交易的财经内容创作者，运营微信公众号与知识星球付费社群，并通过电子邮件向<strong>付费会员</strong>推送每日量化市场情绪与数据看板。</p>
+    <p style="margin-top:10px">我们自建了一套多信号源量化数据管线：每个交易日收盘后，自动从公开/免费数据源（yfinance、akshare、CNN Fear &amp; Greed Index、同花顺问财等）采集数据、计算市场情绪与择时信号、生成可视化看板，再推送到会员邮箱。所有内容均为<strong>数据资讯与研究分享，不构成任何投资建议</strong>。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>订阅看板矩阵</h2>
+    <p class="muted">会员按兴趣订阅其中一个或多个看板；每个看板每交易日推送一封。因此单个会员每天通常收到 1–3 封邮件（取决于其订阅了几个看板）。</p>
+    <div class="grid">
+      <div class="tile"><div class="ic">📊</div><h4>双子星 · 每日交易信号</h4><p>股指期货日度择时：市场情绪 FGI + 次日目标仓位 + 净信号变动。</p></div>
+      <div class="tile"><div class="ic">🧬</div><h4>BFGI-XBI 情绪择时</h4><p>生物科技 ETF（XBI）极端情绪风控择时，CNN 恐惧贪婪指数标尺。</p></div>
+      <div class="tile"><div class="ic">🌐</div><h4>纳指 QDII 早报</h4><p>纳指 QDII 折溢价估值定位 + 情绪象限，识别过贵/过便宜。</p></div>
+      <div class="tile"><div class="ic">🌡️</div><h4>资金面温度计</h4><p>A 股资金面双指数温度读数、国家队 ETF 周度净申赎追踪。</p></div>
+      <div class="tile"><div class="ic">⚖️</div><h4>股债比温度计</h4><p>股债性价比分位（极便宜→极贵）+ 历史未来一年收益参考。</p></div>
+      <div class="tile"><div class="ic">🚥</div><h4>市场情绪日报</h4><p>同花顺多维情绪逆向参考：流量灯、游资、散户热度、杠杆资金。</p></div>
+      <div class="tile"><div class="ic">📈</div><h4>情绪 × 沪深300</h4><p>恐惧贪婪指数叠加沪深300，逆向投资情绪图与教育解读。</p></div>
+      <div class="tile"><div class="ic">🔬</div><h4>微盘情绪信号</h4><p>微盘股情绪量化日报，量价情绪叠加 + 策略净值监控。</p></div>
+      <div class="tile"><div class="ic">📉</div><h4>ETF 稳健择时</h4><p>ETF 择时日报，明日建议仓位 + 可挂载 ETF 清单。</p></div>
+      <div class="tile"><div class="ic">🔄</div><h4>全球资产轮动</h4><p>纳指/创业板/红利低波/黄金动量轮动，调仓提醒。</p></div>
+      <div class="tile"><div class="ic">💊</div><h4>Biotech 催化剂</h4><p>生物医药 PDUFA 审批 / 临床数据读出催化剂日历知识卡。</p></div>
+      <div class="tile"><div class="ic">🎯</div><h4>恐慌共振抄底</h4><p>四因子择时抄底信号，盘后出信号、次日执行。</p></div>
+    </div>
+    <p style="margin-top:18px"><a class="btn" href="sample-email.html">📧 查看一封样本邮件 / View a sample email</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>运营与社群 / Track Record</h2>
+    <p class="muted">以下为「韭菜喵厂长」在各平台的真实运营情况，用于证明本服务面向真实付费用户、非批量营销。</p>
+    <div class="placeholder">
+      〔此处放微信公众号截图 + 名称〕<br>
+      〔此处放知识星球截图 + 星球名称 + 成员数〕<br>
+      〔此处补充运营时长与订阅规模文字〕
+    </div>
   </div>
 </section>
 
@@ -105,9 +138,9 @@
     <h2>订阅与退订</h2>
     <div class="card">
       <ul style="margin-top:0">
-        <li><strong>如何订阅</strong>：本服务仅向<strong>主动申请开通的付费会员</strong>发送邮件。会员完成订阅后登记接收邮箱，我们不向任何未订阅用户发送邮件，也不购买、交换任何邮件地址列表。</li>
-        <li><strong>如何退订</strong>：每封邮件底部均附有退订链接，点击即可退订；也可发送邮件至 <a href="mailto:hoolme@qq.com">hoolme@qq.com</a> 申请退订。退订后我们将立即停止向该地址发送邮件。</li>
-        <li><strong>发送频率</strong>：每位会员每天 1&ndash;3 封，与订阅内容对应，不发送与订阅无关的推广邮件。</li>
+        <li><strong>如何订阅</strong>：本服务仅向<strong>主动申请开通的付费会员</strong>发送邮件。会员完成订阅后登记接收邮箱并选择想要的看板。我们不向任何未订阅用户发送邮件，也不购买、租用或交换任何邮件地址列表。</li>
+        <li><strong>如何退订</strong>：每封邮件底部均附有退订说明与 List-Unsubscribe 头。发送邮件至 <a href="mailto:hoolme@qq.com?subject=unsubscribe">hoolme@qq.com</a>（主题填 unsubscribe）即可退订，退订后我们将立即停止向该地址发送邮件。</li>
+        <li><strong>发送频率</strong>：每个订阅看板每交易日一封，单个会员每天通常 1–3 封，不发送与订阅无关的推广邮件。</li>
       </ul>
     </div>
   </div>
@@ -118,8 +151,9 @@
     <h2>隐私政策</h2>
     <ul>
       <li>我们仅收集提供服务所必需的信息：接收邮箱地址与订阅偏好。</li>
+      <li>会员邮箱地址仅存储于我们的发送系统内部，日志与异常信息均做脱敏处理。</li>
       <li>我们不会向任何第三方出售、出租或共享会员的邮箱地址及个人信息。</li>
-      <li>邮件通过 Amazon SES（Amazon Web Services 提供的邮件发送服务）发送，仅用于投递会员订阅的内容。</li>
+      <li>邮件通过 Amazon SES 发送，仅用于投递会员订阅的内容。</li>
       <li>会员可随时联系 <a href="mailto:hoolme@qq.com">hoolme@qq.com</a> 查询、更正或删除自己的订阅信息。</li>
     </ul>
   </div>
@@ -127,14 +161,23 @@
 
 <section>
   <div class="wrap en">
-    <h2>About This Service (English)</h2>
-    <p><strong>MiaoAlpha (miaoalpha.com)</strong> is a paid, subscription-based email service providing quantitative trading research and daily quant/financial data digests to its members.</p>
+    <h2>About This Service (English — for reference)</h2>
+    <p><strong>MiaoAlpha (miaoalpha.com)</strong> is a paid, subscription-based email service run by an established Chinese quantitative-finance content creator, who also operates a WeChat Official Account and a paid Knowledge Planet (Zhishixingqiu) community.</p>
+    <h3>What we send</h3>
+    <p>Each trading day, our in-house data pipeline automatically pulls data from public/free sources (yfinance, akshare, CNN Fear &amp; Greed Index, THS iWenCai, etc.), computes market-sentiment and timing indicators, and generates visual "dashboards". We offer 12 distinct dashboards (index-futures timing, biotech-ETF sentiment, Nasdaq-QDII premium, A-share fund-flow thermometer, bond-vs-equity thermometer, micro-cap sentiment, ETF rotation, biotech catalysts, etc.). All content is market data and research commentary and does not constitute investment advice.</p>
+    <h3>Recipients &amp; volume</h3>
     <ul>
-      <li><strong>Opt-in only:</strong> Emails are sent exclusively to paying members who explicitly subscribed and registered their email address. We never send unsolicited email and never purchase or rent mailing lists.</li>
-      <li><strong>Unsubscribe:</strong> Every email contains an unsubscribe link. Unsubscribe requests take effect immediately. Members may also email <a href="mailto:hoolme@qq.com">hoolme@qq.com</a>.</li>
-      <li><strong>Volume:</strong> Approximately 1,000 members, each receiving 1&ndash;3 personalized emails per day.</li>
-      <li><strong>Bounce &amp; complaint handling:</strong> Bounced addresses and complaints are automatically added to our suppression list and excluded from future sending.</li>
+      <li><strong>Opt-in only:</strong> Emails go exclusively to paying members who explicitly subscribed. We never purchase, rent, or exchange mailing lists, and we have no non-subscriber recipients.</li>
+      <li><strong>Subscription model (not per-person personalized):</strong> A member subscribes to one or more of the 12 dashboards. Each subscribed dashboard sends one email per trading day, so a member typically receives 1–3 emails/day depending on how many dashboards they follow.</li>
+      <li><strong>Volume:</strong> about 1,000 paying members; expected 1,000–3,000 emails/day.</li>
     </ul>
+    <h3>Unsubscribe, bounce &amp; complaint handling</h3>
+    <ul>
+      <li>Every email carries a List-Unsubscribe header and a visible unsubscribe instruction in the footer; unsubscribe requests take effect immediately.</li>
+      <li>Bounced addresses and complaints are added to a suppression list that is checked before every send. Recipient addresses are stored only inside our sending system; logs are anonymized.</li>
+    </ul>
+    <h3>Authentication</h3>
+    <p>The domain miaoalpha.com is verified with DKIM, SPF (custom MAIL FROM domain mail.miaoalpha.com), and DMARC in the AWS ap-southeast-1 region. A sample email is available at <a href="sample-email.html">/sample-email.html</a>.</p>
   </div>
 </section>
 
