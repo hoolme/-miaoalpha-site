@@ -7,7 +7,7 @@
 <meta name="applicable-device" content="pc,mobile">
 <title>韭菜喵厂长 · 量化研究与金融科普 | MiaoAlpha</title>
 <meta name="description" content="韭菜喵厂长：金融科普作者、量化研究者。双子星股指期货择时模型 2026 年以来的表现，以及美元周期、黄金、光伏、养老金与散户投资的长文。关注公众号「韭菜喵厂长」，加入同名知识星球。">
-<meta name="keywords" content="韭菜喵厂长,喵厂长,双子星,恐惧贪婪指数,量化投资,股指期货择时,知识星球,金融科普,美元周期,QMT">
+<meta name="keywords" content="韭菜喵厂长,喵厂长,双子星,市场情绪,量化投资,股指期货择时,知识星球,金融科普,美元周期,QMT">
 <link rel="canonical" href="https://miaoalpha.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="韭菜喵厂长 MiaoAlpha">
@@ -32,7 +32,7 @@
       "url": "https://miaoalpha.com/",
       "image": "https://miaoalpha.com/assets/avatar.jpg",
       "description": "金融科普作者、量化研究者，知识星球「韭菜喵厂长」主理人。作品有双子星股指期货择时模型、微盘股情绪指数、12 个量化数据看板。",
-      "knowsAbout": ["量化投资", "股指期货择时", "恐惧贪婪指数", "美元周期", "QMT 自动化交易", "金融科普"],
+      "knowsAbout": ["量化投资", "股指期货择时", "市场情绪", "美元周期", "QMT 自动化交易", "金融科普"],
       "sameAs": ["https://t.zsxq.com/zYhmX", "https://github.com/hoolme"]
     },
     {
@@ -47,11 +47,11 @@
       "@type": "ItemList",
       "name": "韭菜喵厂长的长文",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@type": "Article", "headline": "亏钱不是被主力针对：散户投资五年还在亏，到底该怎么办", "datePublished": "2026-09-22", "url": "https://articles.zsxq.com/id_6kcnpb2c47dp.html", "author": { "@id": "https://miaoalpha.com/#author" } } },
+        { "@type": "ListItem", "position": 1, "item": { "@type": "Article", "headline": "亏钱不是被主力针对：散户投资五年还在亏，到底该怎么办", "datePublished": "2026-09-22", "url": "https://miaoalpha.com/articles/retail-five-years/", "author": { "@id": "https://miaoalpha.com/#author" } } },
         { "@type": "ListItem", "position": 2, "item": { "@type": "Article", "headline": "中国连买21个月黄金，人民币仍只占全球储备1.99%：黄金只解决一半问题", "datePublished": "2026-08-14", "url": "https://articles.zsxq.com/id_475155ttqdq7.html", "author": { "@id": "https://miaoalpha.com/#author" } } },
-        { "@type": "ListItem", "position": 3, "item": { "@type": "Article", "headline": "沪深300十一年只涨14.7%，按美元强弱一分：一边2块66，一边4毛3", "datePublished": "2026-08-12", "url": "https://articles.zsxq.com/id_mz2pw3xnw2xk.html", "author": { "@id": "https://miaoalpha.com/#author" } } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "Article", "headline": "沪深300十一年只涨14.7%，按美元强弱一分：一边2块66，一边4毛3", "datePublished": "2026-08-12", "url": "https://miaoalpha.com/articles/dollar-cycle-hs300/", "author": { "@id": "https://miaoalpha.com/#author" } } },
         { "@type": "ListItem", "position": 4, "item": { "@type": "Article", "headline": "光伏产能做到需求两倍，前三季度亏了3100亿：这种行业什么时候才能买", "datePublished": "2026-08-11", "url": "https://articles.zsxq.com/id_ca6s3fimxzms.html", "author": { "@id": "https://miaoalpha.com/#author" } } },
-        { "@type": "ListItem", "position": 5, "item": { "@type": "Article", "headline": "49万亿美元养老钱绑着美股，中国人的钱压在房子里：A股涨不动的根子", "datePublished": "2026-08-11", "url": "https://articles.zsxq.com/id_ckh7vqcbuva3.html", "author": { "@id": "https://miaoalpha.com/#author" } } }
+        { "@type": "ListItem", "position": 5, "item": { "@type": "Article", "headline": "49万亿美元养老钱绑着美股，中国人的钱压在房子里：A股涨不动的根子", "datePublished": "2026-08-11", "url": "https://miaoalpha.com/articles/pension-load-bearing-wall/", "author": { "@id": "https://miaoalpha.com/#author" } } }
       ]
     }
   ]
@@ -117,6 +117,8 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
 .col h3 { font-size: 18px; }
 .feature:hover h3, .col:hover h3 { text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 3px; text-underline-offset: 4px; }
 .more-note { margin-top: 20px; color: var(--muted); font-size: 14.5px; }
+.meta { display: flex; align-items: center; gap: 10px; }
+.try { font-size: 12px; font-weight: 700; line-height: 1.7; padding: 0 6px; background: var(--yellow); color: var(--on-yellow); letter-spacing: .04em; }
 
 /* 人物 */
 .people { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 44px; align-items: start; }
@@ -125,16 +127,27 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
 .qa { margin: 26px 0 0; display: grid; gap: 18px; }
 .qa dt { font-weight: 700; }
 .qa dt::before { content: "问"; display: inline-block; background: var(--ink); color: var(--bg); font-size: 12px; padding: 0 6px; margin-right: 10px; vertical-align: 2px; }
-.qa dd { margin: 4px 0 0; font-family: var(--serif); font-weight: 600; font-size: 18px; line-height: 1.7; }
+.qa dd { margin: 4px 0 0; font-family: var(--serif); font-weight: 600; font-size: 18px; line-height: 1.7; text-wrap: pretty; }
 .qa dd::before { content: "答"; display: inline-block; background: var(--yellow); color: var(--on-yellow); font-family: var(--sans); font-size: 12px; padding: 0 6px; margin-right: 10px; vertical-align: 3px; }
 .src { font-size: 13px; color: var(--muted); margin-top: 10px; }
 
 /* 订阅 */
-.sub { background: var(--yellow); color: var(--on-yellow); padding: 36px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 22px; align-items: center; }
+.sub { background: var(--yellow); color: var(--on-yellow); padding: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 22px; align-items: start; }
 .sub h2 { margin-top: 0; }
 .sub ul { margin: 10px 0 0; padding-left: 18px; }
 .sub .kicker { color: rgba(22, 21, 15, .7); }
-.howto { grid-column: 1 / -1; display: grid; gap: 12px; }
+.feeds { grid-column: 2 / -1; }
+.feeds h3 { margin: 0; }
+.feeds > p { font-size: 14.5px; margin-bottom: 12px; }
+.feed-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.fg { font-size: 12.5px; font-weight: 700; letter-spacing: .14em; border-bottom: 2px solid var(--on-yellow); padding-bottom: 3px; }
+.sub .feeds ul { margin: 0; padding: 0; list-style: none; }
+.feeds li { padding: 6px 0; border-bottom: 1px solid rgba(22, 21, 15, .2); }
+.feeds li b { display: block; font-size: 15px; line-height: 1.5; }
+.feeds li span { display: block; font-size: 13.5px; line-height: 1.55; color: rgba(22, 21, 15, .78); }
+.sub .qr-card, .howto { align-self: center; }
+.qr-card { scroll-margin-top: 16px; }
+.howto { display: grid; gap: 12px; }
 .howto p { font-size: 14.5px; }
 .howto .acts { display: flex; flex-wrap: wrap; gap: 10px; }
 .howto a, .howto button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; font: inherit; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; border: 2px solid var(--on-yellow); color: var(--on-yellow); background: transparent; }
@@ -149,7 +162,7 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
   .story, .people, .feature { grid-template-columns: minmax(0, 1fr); }
   .cols4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sub { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .sub > :first-child { grid-column: 1 / -1; }
+  .sub-head, .feeds, .howto { grid-column: 1 / -1; }
   .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .strip > div:nth-child(3) { padding-left: 0; border-left: 0; }
   .strip > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
@@ -183,7 +196,8 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
   .portrait { display: none; }
   .qa dd { font-size: 16.5px; }
   .sub { grid-template-columns: minmax(0, 1fr); padding: 24px 18px; margin-inline: -16px; }
-  .sub > :first-child { grid-column: auto; }
+  .sub-head, .feeds, .howto { grid-column: auto; }
+  .feed-groups { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .home-footer { margin-top: -40px; }
 }
 @media (prefers-reduced-motion: reduce) { .cover .photo img { animation: none; } }
@@ -202,9 +216,9 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
         <p class="lead-cap">一台恐慌时做多的机器：双子星今年以来，同期 IF 期货 −8.86%</p>
       </div>
       <nav class="lines" aria-label="本期要目">
-        <a href="#columns">散户投资五年还在亏，问题出在哪<small>亏钱不是被主力针对</small></a>
-        <a href="#columns">一块钱剩四毛三<small>美元周期里的 A 股和全球市场</small></a>
-        <a href="#columns">49 万亿养老金，美股长牛的承重墙<small>A 股涨不动的根子</small></a>
+        <a href="articles/retail-five-years/">散户投资五年还在亏，问题出在哪<small>亏钱不是被主力针对</small></a>
+        <a href="articles/dollar-cycle-hs300/">一块钱剩四毛三<small>美元周期里的 A 股和全球市场</small></a>
+        <a href="articles/pension-load-bearing-wall/">49 万亿养老金，美股长牛的承重墙<small>A 股涨不动的根子</small></a>
       </nav>
     </div>
     <figure class="photo">
@@ -223,12 +237,12 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
   <section id="story" aria-label="封面故事">
     <p class="kicker">封面故事</p>
     <h2>别人恐慌时，它在做多</h2>
-    <p class="dek">双子星只看一个情绪指标：市场的恐惧贪婪指数。今年沪深300股指期货跌了 8.86%，它的 5 手组合赚了 44.16%。</p>
+    <p class="dek">双子星只看一样东西：市场情绪。今年沪深300股指期货跌了 8.86%，它的 5 手组合赚了 44.16%。</p>
     <div class="strip">
       <div><div class="v">+44.16%</div><div class="k">5 手组合 · 今年以来</div></div>
       <div><div class="v">+27.15%</div><div class="k">3 手组合 · 今年以来</div></div>
       <div><div class="v">−17.51%</div><div class="k">5 手 · 今年最大回撤</div></div>
-      <div><div class="v" id="fgi-v">7.95</div><div class="k" id="fgi-k">今日恐惧贪婪指数 · 恐慌</div></div>
+      <div><div class="v" id="fgi-v">7.95</div><div class="k" id="fgi-k">今日市场情绪 · 恐慌</div></div>
     </div>
     <div class="legend"><span><i style="background:var(--c-strat)"></i>双子星 5 手</span><span><i style="background:var(--c-bench)"></i>沪深300股指期货</span></div>
     <div class="chartbox" id="line"><div class="mc-plot"></div></div>
@@ -253,19 +267,19 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
   <section id="columns" aria-label="专栏">
     <p class="kicker">专栏</p>
     <h2>把大问题讲成小故事</h2>
-    <a class="feature" href="https://articles.zsxq.com/id_6kcnpb2c47dp.html" target="_blank" rel="noopener">
+    <a class="feature" href="articles/retail-five-years/">
       <img src="assets/art1.jpg" width="1100" height="638" loading="lazy" decoding="async" alt="配图：两个指数二十年的走势对比">
-      <div><time datetime="2026-09-22">2026-09-22</time>
+      <div><span class="meta"><time datetime="2026-09-22">2026-09-22</time><b class="try">可试读</b></span>
         <h3>亏钱不是被主力针对：散户投资五年还在亏，到底该怎么办</h3>
         <p>市场上没有专门针对你的主力，只有强者和弱者的相对位置。从《天道》里的强势文化，讲到老子的"损有余而补不足"，再讲到胜率和赔率：散户该先想的是怎么活下来。</p></div>
     </a>
     <div class="cols4">
       <a class="col" href="https://articles.zsxq.com/id_475155ttqdq7.html" target="_blank" rel="noopener"><img src="assets/art2.jpg" width="1100" height="573" loading="lazy" decoding="async" alt="配图：全球外汇储备币种构成"><time datetime="2026-08-14">2026-08-14</time><h3>中国连买21个月黄金，人民币仍只占全球储备1.99%：黄金只解决一半问题</h3><p>全世界赚到美元以后，还愿意把钱留在美元体系里。</p></a>
-      <a class="col" href="https://articles.zsxq.com/id_mz2pw3xnw2xk.html" target="_blank" rel="noopener"><img src="assets/art3.jpg" width="1100" height="840" loading="lazy" decoding="async" alt="配图：美元周期与沪深300"><time datetime="2026-08-12">2026-08-12</time><h3>沪深300十一年只涨14.7%，按美元强弱一分：一边2块66，一边4毛3</h3><p>15 个全球主要股指无一例外，洗牌检验 5000 次。</p></a>
+      <a class="col" href="articles/dollar-cycle-hs300/"><img src="assets/art3.jpg" width="1100" height="840" loading="lazy" decoding="async" alt="配图：美元周期与沪深300"><span class="meta"><time datetime="2026-08-12">2026-08-12</time><b class="try">可试读</b></span><h3>沪深300十一年只涨14.7%，按美元强弱一分：一边2块66，一边4毛3</h3><p>15 个全球主要股指无一例外，洗牌检验 5000 次。</p></a>
       <a class="col" href="https://articles.zsxq.com/id_ca6s3fimxzms.html" target="_blank" rel="noopener"><img src="assets/art4.jpg" width="1100" height="660" loading="lazy" decoding="async" alt="配图：光伏产能与需求对比"><time datetime="2026-08-11">2026-08-11</time><h3>光伏产能做到需求两倍，前三季度亏了3100亿：这种行业什么时候才能买</h3><p>谁拍板、谁认账，决定了空心化还是过剩。</p></a>
-      <a class="col" href="https://articles.zsxq.com/id_ckh7vqcbuva3.html" target="_blank" rel="noopener"><img src="assets/art5.jpg" width="1100" height="770" loading="lazy" decoding="async" alt="配图：中美居民资产结构对比"><time datetime="2026-08-11">2026-08-11</time><h3>49万亿美元养老钱绑着美股，中国人的钱压在房子里：A股涨不动的根子</h3><p>美国把股市当承重墙砌。</p></a>
+      <a class="col" href="articles/pension-load-bearing-wall/"><img src="assets/art5.jpg" width="1100" height="770" loading="lazy" decoding="async" alt="配图：中美居民资产结构对比"><span class="meta"><time datetime="2026-08-11">2026-08-11</time><b class="try">可试读</b></span><h3>49万亿美元养老钱绑着美股，中国人的钱压在房子里：A股涨不动的根子</h3><p>美国把股市当承重墙砌。</p></a>
     </div>
-    <p class="more-note">全文在知识星球，登录后阅读；星球里还有 QMT 代码、策略研究和工具教程。</p>
+    <p class="more-note">标「可试读」的三篇，可以先在本站读开头；全文都在知识星球，登录后阅读。星球里还有 QMT 代码、策略研究和工具教程。</p>
   </section>
 
   <section id="people" class="people" aria-label="人物">
@@ -280,18 +294,18 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
       </div>
       <dl class="qa">
         <dt>为什么要办知识星球？</dt>
-        <dd>做知识付费，我的初衷并非为了赚钱，而是为了"筛选"。……付费，是最好的门槛。</dd>
+        <dd>爱出者爱返，福往者福来。愿意为知识付费的人，往往也是很 Nice 的人。我想筛选出愿意学习、又很 Nice 的人……付费，是最好的门槛。</dd>
         <dt>星球是个什么样的地方？</dt>
         <dd>这里不是喊单群，更不是兜售策略的团购群。这里是一个斜杠青年、想要把投资作为第二职业的自习室。</dd>
         <dt>希望它将来变成什么样？</dt>
         <dd>当星球有 1000 个成员时，我希望看到的不是 1000 个跟随者，而是 1000 种思维的碰撞。</dd>
       </dl>
-      <p class="src">回答摘自厂长在知识星球发表的《发刊词》（2025-12-14）。</p>
+      <p class="src">后两条回答摘自厂长在知识星球发表的《发刊词》（2025-12-14）。</p>
     </div>
   </section>
 
   <section id="subscribe" class="sub" aria-label="订阅">
-    <div>
+    <div class="sub-head">
       <p class="kicker">订阅</p>
       <h2>扫码订阅厂长</h2>
       <p>公众号免费看观点；知识星球 ¥168/年，里面有：</p>
@@ -302,7 +316,32 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
         <li>会员交流群</li>
       </ul>
     </div>
-    <div class="qr-card"><div><strong>韭菜喵厂长</strong><span>微信扫码关注公众号</span><em class="wx">微信公众号</em></div><img src="assets/qr-wechat.png" width="518" height="518" loading="lazy" alt="公众号「韭菜喵厂长」二维码"></div>
+    <div class="feeds">
+      <h3>会员定期推送</h3>
+      <p>星球会员可以按兴趣订阅，到点自动发到邮箱或推送到微信。</p>
+      <div class="feed-groups">
+        <div><p class="fg">市场情绪</p><ul>
+          <li><b>市场情绪日报</b><span>A 股多维情绪：流量灯、游资、散户热度、杠杆资金</span></li>
+          <li><b>市场情绪追踪</b><span>情绪温度叠加沪深300，给出加仓、多看少动、减仓的参考</span></li>
+          <li><b>美股情绪</b><span>CNN 美股市场情绪指数，每日读数，看美股正处在恐慌还是亢奋</span></li>
+        </ul></div>
+        <div><p class="fg">择时信号</p><ul>
+          <li><b>双子星指数择时</b><span>股指期货日度择时，给出次日目标持仓</span></li>
+          <li><b>微盘股情绪择时</b><span>微盘股情绪量化与择时信号，附策略净值</span></li>
+          <li><b>恐慌共振抄底</b><span>四因子择时的抄底信号，标的国证2000ETF，只做多</span></li>
+          <li><b>全球资产动量轮动</b><span>纳指、创业板、红利低波、黄金之间动量轮动，调仓时提醒</span></li>
+        </ul></div>
+        <div><p class="fg">温度计与估值</p><ul>
+          <li><b>股债比温度计</b><span>股票相对债券的性价比分位，从极便宜到极贵，附逃顶提示</span></li>
+          <li><b>A股资金面温度计</b><span>中证500、沪深300 的资金面温度，追踪国家队 ETF 申赎</span></li>
+          <li><b>纳指QDII折溢价</b><span>纳指 QDII 基金的折溢价与估值定位，看现在买贵不贵</span></li>
+        </ul></div>
+        <div><p class="fg">图集</p><ul>
+          <li><b>财经图集</b><span>每天早晚两期，精选财经图表合集</span></li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="qr-card" id="follow"><div><strong>韭菜喵厂长</strong><span>微信扫码关注公众号</span><em class="wx">微信公众号</em></div><img src="assets/qr-wechat.png" width="518" height="518" loading="lazy" alt="公众号「韭菜喵厂长」二维码"></div>
     <div class="qr-card"><div><strong>韭菜喵厂长</strong><span>微信扫码加入星球</span><em class="zx">知识星球</em></div><img src="assets/qr-zsxq.png" width="462" height="462" loading="lazy" alt="知识星球「韭菜喵厂长」二维码"></div>
     <div class="howto">
       <p>用手机看这页的话：在微信里长按二维码就能识别；不在微信里，点下面的按钮。</p>
@@ -326,7 +365,7 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
 </div>
 
 <nav class="dock" aria-label="快速入口">
-  <a class="a1" href="#subscribe">关注公众号</a>
+  <a class="a1" href="#follow">关注公众号</a>
   <a class="a2" href="https://t.zsxq.com/zYhmX" target="_blank" rel="noopener">加入知识星球</a>
 </nav>
 
@@ -339,7 +378,7 @@ time { font-size: 13px; color: var(--muted); letter-spacing: .06em; font-variant
   (function () {
     var G = window.GEMINI, f = G.fgi[G.fgi.length - 1];
     document.getElementById('fgi-v').textContent = f.toFixed(2);
-    document.getElementById('fgi-k').textContent = '今日恐惧贪婪指数 · ' + MiaoChart.fgiLabel(f);
+    document.getElementById('fgi-k').textContent = '今日市场情绪 · ' + MiaoChart.fgiLabel(f);
     var btn = document.getElementById('copy-name'), tip = document.getElementById('copy-tip');
     btn.addEventListener('click', function () {
       var done = function () { tip.textContent = '已复制「韭菜喵厂长」，到微信里搜索公众号粘贴即可'; };
